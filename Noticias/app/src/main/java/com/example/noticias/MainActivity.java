@@ -27,8 +27,26 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void checkbox(){
-        boolean teste = checkEconomia.isChecked();
-        textResultado.setText("Economia pressionado: " +teste);
+        //boolean teste = checkEconomia.isChecked();
+
+        String texto="";
+
+        if(checkEconomia.isChecked()){
+
+            texto = "Economia selecionado - ";
+
+
+       }
+        if(checkEsporte.isChecked())   {
+            texto = texto + "Esporte selecionado - ";
+        }
+
+        if(checkLazer.isChecked()){
+
+            texto = texto + "Lazer selecionado - ";
+        }
+        
+       textResultado.setText(texto);      
          
         
     }
